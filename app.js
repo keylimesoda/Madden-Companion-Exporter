@@ -4,11 +4,11 @@ var admin = require("firebase-admin");
 
 const app = express();
 
-const serviceAccount = require("./cfmexport-firebase-adminsdk-hye9t-13c1204d5c.json");
+const serviceAccount = require("./REPLACE_WITH_SERVICE_ACCOUNT.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://cfmexport.firebaseio.com"
+  databaseURL: "https://<DATABASE_NAME>.firebaseio.com/"
 });
 
 // Setup
